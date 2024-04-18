@@ -9,21 +9,61 @@
 /* Begin PBXBuildFile section */
 		49D8B8BD2BCFD97C00B49C46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8BC2BCFD97C00B49C46 /* AppDelegate.swift */; };
 		49D8B8BF2BCFD97C00B49C46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8BE2BCFD97C00B49C46 /* SceneDelegate.swift */; };
-		49D8B8C12BCFD97C00B49C46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8C02BCFD97C00B49C46 /* ViewController.swift */; };
-		49D8B8C42BCFD97C00B49C46 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 49D8B8C32BCFD97C00B49C46 /* Base */; };
+		49D8B8C12BCFD97C00B49C46 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8C02BCFD97C00B49C46 /* HomeVC.swift */; };
 		49D8B8C62BCFD97E00B49C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49D8B8C52BCFD97E00B49C46 /* Assets.xcassets */; };
 		49D8B8C92BCFD97E00B49C46 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 49D8B8C82BCFD97E00B49C46 /* Base */; };
+		49D8B8D42BCFE3FB00B49C46 /* ScoreBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8D32BCFE3FB00B49C46 /* ScoreBoardVC.swift */; };
+		49D8B8D72BCFE53400B49C46 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8D62BCFE53400B49C46 /* UIView+Ext.swift */; };
+		49D8B8DA2BCFE59100B49C46 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 49D8B8D92BCFE59100B49C46 /* SnapKit */; };
+		49D8B8DE2BCFEEF700B49C46 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8DD2BCFEEF700B49C46 /* CustomTextField.swift */; };
+		49D8B8E12BD0075900B49C46 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8E02BD0075900B49C46 /* Team.swift */; };
+		49D8B8E32BD007B200B49C46 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8E22BD007B200B49C46 /* League.swift */; };
+		49D8B8E82BD0083800B49C46 /* Turkey_SuperLig.json in Resources */ = {isa = PBXBuildFile; fileRef = 49D8B8E72BD0083800B49C46 /* Turkey_SuperLig.json */; };
+		49D8B8EB2BD0091200B49C46 /* CustomEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8EA2BD0091200B49C46 /* CustomEnum.swift */; };
+		49D8B8ED2BD0098900B49C46 /* England_PremierLeague.json in Resources */ = {isa = PBXBuildFile; fileRef = 49D8B8EC2BD0098900B49C46 /* England_PremierLeague.json */; };
+		49D8B8EF2BD0098E00B49C46 /* France_Ligue1.json in Resources */ = {isa = PBXBuildFile; fileRef = 49D8B8EE2BD0098E00B49C46 /* France_Ligue1.json */; };
+		49D8B8F12BD0099300B49C46 /* Spain_LaLiga.json in Resources */ = {isa = PBXBuildFile; fileRef = 49D8B8F02BD0099300B49C46 /* Spain_LaLiga.json */; };
+		49D8B8F32BD0099E00B49C46 /* Germany_Bundesliga.json in Resources */ = {isa = PBXBuildFile; fileRef = 49D8B8F22BD0099E00B49C46 /* Germany_Bundesliga.json */; };
+		49D8B8F62BD009B700B49C46 /* LeagueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8F52BD009B700B49C46 /* LeagueService.swift */; };
+		49D8B8FD2BD03C4200B49C46 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8FC2BD03C4200B49C46 /* CustomLabel.swift */; };
+		49D8B8FF2BD135C200B49C46 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8FE2BD135C200B49C46 /* KeyboardLayoutConstraint.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		49D8B8F82BD01ECD00B49C46 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		49D8B8B92BCFD97C00B49C46 /* Hit Score.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hit Score.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D8B8BC2BCFD97C00B49C46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49D8B8BE2BCFD97C00B49C46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49D8B8C02BCFD97C00B49C46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		49D8B8C32BCFD97C00B49C46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49D8B8C02BCFD97C00B49C46 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		49D8B8C52BCFD97E00B49C46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49D8B8C82BCFD97E00B49C46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49D8B8CA2BCFD97E00B49C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49D8B8D32BCFE3FB00B49C46 /* ScoreBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardVC.swift; sourceTree = "<group>"; };
+		49D8B8D62BCFE53400B49C46 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		49D8B8DD2BCFEEF700B49C46 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		49D8B8E02BD0075900B49C46 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		49D8B8E22BD007B200B49C46 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		49D8B8E72BD0083800B49C46 /* Turkey_SuperLig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Turkey_SuperLig.json; sourceTree = "<group>"; };
+		49D8B8EA2BD0091200B49C46 /* CustomEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEnum.swift; sourceTree = "<group>"; };
+		49D8B8EC2BD0098900B49C46 /* England_PremierLeague.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = England_PremierLeague.json; sourceTree = "<group>"; };
+		49D8B8EE2BD0098E00B49C46 /* France_Ligue1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = France_Ligue1.json; sourceTree = "<group>"; };
+		49D8B8F02BD0099300B49C46 /* Spain_LaLiga.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Spain_LaLiga.json; sourceTree = "<group>"; };
+		49D8B8F22BD0099E00B49C46 /* Germany_Bundesliga.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Germany_Bundesliga.json; sourceTree = "<group>"; };
+		49D8B8F52BD009B700B49C46 /* LeagueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueService.swift; sourceTree = "<group>"; };
+		49D8B8FC2BD03C4200B49C46 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		49D8B8FE2BD135C200B49C46 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49D8B8DA2BCFE59100B49C46 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +97,92 @@
 		49D8B8BB2BCFD97C00B49C46 /* Hit Score */ = {
 			isa = PBXGroup;
 			children = (
-				49D8B8BC2BCFD97C00B49C46 /* AppDelegate.swift */,
-				49D8B8BE2BCFD97C00B49C46 /* SceneDelegate.swift */,
-				49D8B8C02BCFD97C00B49C46 /* ViewController.swift */,
-				49D8B8C22BCFD97C00B49C46 /* Main.storyboard */,
-				49D8B8C52BCFD97E00B49C46 /* Assets.xcassets */,
-				49D8B8C72BCFD97E00B49C46 /* LaunchScreen.storyboard */,
+				49D8B8FE2BD135C200B49C46 /* KeyboardLayoutConstraint.swift */,
+				49D8B8F42BD009A900B49C46 /* Services */,
+				49D8B8E92BD0090100B49C46 /* Utility */,
+				49D8B8E42BD007D100B49C46 /* Data */,
+				49D8B8DF2BD0074B00B49C46 /* Model */,
+				49D8B8D52BCFE52300B49C46 /* Extensions */,
+				49D8B8D22BCFE3D700B49C46 /* CustomView */,
+				49D8B8D12BCFE3D100B49C46 /* Views */,
+				49D8B8D02BCFE3C300B49C46 /* Supporting */,
 				49D8B8CA2BCFD97E00B49C46 /* Info.plist */,
 			);
 			path = "Hit Score";
+			sourceTree = "<group>";
+		};
+		49D8B8D02BCFE3C300B49C46 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				49D8B8BC2BCFD97C00B49C46 /* AppDelegate.swift */,
+				49D8B8BE2BCFD97C00B49C46 /* SceneDelegate.swift */,
+				49D8B8C52BCFD97E00B49C46 /* Assets.xcassets */,
+				49D8B8C72BCFD97E00B49C46 /* LaunchScreen.storyboard */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		49D8B8D12BCFE3D100B49C46 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49D8B8C02BCFD97C00B49C46 /* HomeVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		49D8B8D22BCFE3D700B49C46 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				49D8B8D32BCFE3FB00B49C46 /* ScoreBoardVC.swift */,
+				49D8B8DD2BCFEEF700B49C46 /* CustomTextField.swift */,
+				49D8B8FC2BD03C4200B49C46 /* CustomLabel.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		49D8B8D52BCFE52300B49C46 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				49D8B8D62BCFE53400B49C46 /* UIView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		49D8B8DF2BD0074B00B49C46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49D8B8E02BD0075900B49C46 /* Team.swift */,
+				49D8B8E22BD007B200B49C46 /* League.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		49D8B8E42BD007D100B49C46 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				49D8B8EE2BD0098E00B49C46 /* France_Ligue1.json */,
+				49D8B8F22BD0099E00B49C46 /* Germany_Bundesliga.json */,
+				49D8B8EC2BD0098900B49C46 /* England_PremierLeague.json */,
+				49D8B8F02BD0099300B49C46 /* Spain_LaLiga.json */,
+				49D8B8E72BD0083800B49C46 /* Turkey_SuperLig.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		49D8B8E92BD0090100B49C46 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				49D8B8EA2BD0091200B49C46 /* CustomEnum.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		49D8B8F42BD009A900B49C46 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				49D8B8F52BD009B700B49C46 /* LeagueService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,12 +195,16 @@
 				49D8B8B52BCFD97C00B49C46 /* Sources */,
 				49D8B8B62BCFD97C00B49C46 /* Frameworks */,
 				49D8B8B72BCFD97C00B49C46 /* Resources */,
+				49D8B8F82BD01ECD00B49C46 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Hit Score";
+			packageProductDependencies = (
+				49D8B8D92BCFE59100B49C46 /* SnapKit */,
+			);
 			productName = "Hit Score";
 			productReference = 49D8B8B92BCFD97C00B49C46 /* Hit Score.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +233,9 @@
 				Base,
 			);
 			mainGroup = 49D8B8B02BCFD97C00B49C46;
+			packageReferences = (
+				49D8B8D82BCFE59100B49C46 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 49D8B8BA2BCFD97C00B49C46 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +250,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49D8B8EF2BD0098E00B49C46 /* France_Ligue1.json in Resources */,
+				49D8B8F12BD0099300B49C46 /* Spain_LaLiga.json in Resources */,
 				49D8B8C62BCFD97E00B49C46 /* Assets.xcassets in Resources */,
+				49D8B8ED2BD0098900B49C46 /* England_PremierLeague.json in Resources */,
+				49D8B8F32BD0099E00B49C46 /* Germany_Bundesliga.json in Resources */,
 				49D8B8C92BCFD97E00B49C46 /* Base in Resources */,
-				49D8B8C42BCFD97C00B49C46 /* Base in Resources */,
+				49D8B8E82BD0083800B49C46 /* Turkey_SuperLig.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +267,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49D8B8C12BCFD97C00B49C46 /* ViewController.swift in Sources */,
+				49D8B8C12BCFD97C00B49C46 /* HomeVC.swift in Sources */,
 				49D8B8BD2BCFD97C00B49C46 /* AppDelegate.swift in Sources */,
+				49D8B8FD2BD03C4200B49C46 /* CustomLabel.swift in Sources */,
+				49D8B8EB2BD0091200B49C46 /* CustomEnum.swift in Sources */,
+				49D8B8E32BD007B200B49C46 /* League.swift in Sources */,
+				49D8B8FF2BD135C200B49C46 /* KeyboardLayoutConstraint.swift in Sources */,
+				49D8B8E12BD0075900B49C46 /* Team.swift in Sources */,
+				49D8B8DE2BCFEEF700B49C46 /* CustomTextField.swift in Sources */,
+				49D8B8F62BD009B700B49C46 /* LeagueService.swift in Sources */,
+				49D8B8D72BCFE53400B49C46 /* UIView+Ext.swift in Sources */,
+				49D8B8D42BCFE3FB00B49C46 /* ScoreBoardVC.swift in Sources */,
 				49D8B8BF2BCFD97C00B49C46 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +285,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		49D8B8C22BCFD97C00B49C46 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49D8B8C32BCFD97C00B49C46 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		49D8B8C72BCFD97E00B49C46 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,20 +422,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9T7P7L9G6Z;
+				DEVELOPMENT_TEAM = 6X2LX4J4AB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hit Score/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hakantrkmn.Hit-Score";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hit.score;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,20 +450,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9T7P7L9G6Z;
+				DEVELOPMENT_TEAM = 6X2LX4J4AB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hit Score/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hakantrkmn.Hit-Score";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hit.score;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -363,6 +493,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		49D8B8D82BCFE59100B49C46 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		49D8B8D92BCFE59100B49C46 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49D8B8D82BCFE59100B49C46 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 49D8B8B12BCFD97C00B49C46 /* Project object */;
 }
