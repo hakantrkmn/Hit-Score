@@ -21,7 +21,8 @@ class ScoreBoardVC: UIView
     
     var vsLabel = CustomLabel(fontSize: 30, weight: .bold, text: "V")
     var stadiumName = CustomLabel(fontSize: 30, weight: .bold, text: "")
-    
+    var stadiumEmoji = CustomLabel(fontSize: 30, weight: .bold, text: "🏟️")
+
     var homeTeamScoreTextField = CustomTextField(fontSize: 45,haveUnderline: false)
     var awayTeamScoreTextField = CustomTextField(fontSize: 45,haveUnderline: false)
     
@@ -82,7 +83,7 @@ class ScoreBoardVC: UIView
                 
             }
             homeTeamTextField.text = homeTeams.first?.team_name
-            stadiumName.text =  homeTeams.first?.team_stadium
+            stadiumName.text =   homeTeams.first!.team_stadium + "\n 🏟️"
 
         }
            
@@ -113,12 +114,14 @@ class ScoreBoardVC: UIView
         homeLabel.textColor = .systemRed
         awayLabel.textColor = .systemBlue
         
+        stadiumName.textAlignment = .center
+        
         
     }
     
     func setupUI()
     {
-        self.addSubViews(scoreBackground,homeTeamScoreTextField,awayTeamScoreTextField,scoreSeperator,stadiumName,homeLabel,awayLabel)
+        self.addSubViews(scoreBackground,homeTeamScoreTextField,awayTeamScoreTextField,scoreSeperator,stadiumName,homeLabel,awayLabel,stadiumEmoji)
         scoreBackground.addSubViews(homeTeamTextField,awayTeamTextField,vsLabel)
         
         scoreBackground.snp.makeConstraints { make in
@@ -186,6 +189,12 @@ class ScoreBoardVC: UIView
             make.centerX.equalToSuperview()
         }
         
+        stadiumEmoji.snp.makeConstraints { make in
+            make.top.equalTo(stadiumName.snp.bottom)
+            make.centerX.equalTo(stadiumName)
+            
+        }
+        
     }
     
     
@@ -197,7 +206,7 @@ extension ScoreBoardVC : UITextFieldDelegate
     // MARK: Text Field Protocols
     func textFieldDidBeginEditing(_ textField: UITextField) {
         currentTextField = textField
-        var tf = self.currentTextField as! CustomTextField
+        let tf = self.currentTextField as! CustomTextField
         UIView.animate(withDuration: 0.5, delay: 0, options: [.repeat, .autoreverse], animations: {
             
             tf.underlineLayer.backgroundColor = UIColor.red.cgColor
@@ -263,7 +272,7 @@ extension ScoreBoardVC : UIPickerViewDelegate,UIPickerViewDataSource
             if currentTextField == homeTeamTextField
             {
                 currentTextField.text = homeTeams[row].team_name
-                stadiumName.text =  homeTeams[row].team_stadium
+                stadiumName.text =  homeTeams[row].team_stadium + "\n 🏟️"
             }
             else
             {

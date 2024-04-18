@@ -21,8 +21,7 @@ class CustomTextField: UITextField
         textAlignment = .center
         adjustsFontSizeToFitWidth = true
         font = UIFont.systemFont(ofSize: fontSize)
-        //        layer.borderWidth = 3
-        //        layer.cornerRadius = 15
+       
         tintColor = .clear
         if haveUnderline
         {

@@ -18,8 +18,10 @@ extension UIView
         }
     }
     func screenshot() -> UIImage {
+        let size =  CGSize(width: bounds.size.width, height: bounds.size.height )
         return UIGraphicsImageRenderer(size: bounds.size).image { _ in
-          drawHierarchy(in: CGRect(origin: .zero, size: bounds.size), afterScreenUpdates: true)
+          drawHierarchy(in: CGRect(origin: .zero, size: size
+                                  ), afterScreenUpdates: true)
         }
       }
 }

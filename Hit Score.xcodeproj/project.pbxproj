@@ -26,7 +26,6 @@
 		49D8B8F32BD0099E00B49C46 /* Germany_Bundesliga.json in Resources */ = {isa = PBXBuildFile; fileRef = 49D8B8F22BD0099E00B49C46 /* Germany_Bundesliga.json */; };
 		49D8B8F62BD009B700B49C46 /* LeagueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8F52BD009B700B49C46 /* LeagueService.swift */; };
 		49D8B8FD2BD03C4200B49C46 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8FC2BD03C4200B49C46 /* CustomLabel.swift */; };
-		49D8B8FF2BD135C200B49C46 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8B8FE2BD135C200B49C46 /* KeyboardLayoutConstraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,7 +62,6 @@
 		49D8B8F22BD0099E00B49C46 /* Germany_Bundesliga.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Germany_Bundesliga.json; sourceTree = "<group>"; };
 		49D8B8F52BD009B700B49C46 /* LeagueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueService.swift; sourceTree = "<group>"; };
 		49D8B8FC2BD03C4200B49C46 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
-		49D8B8FE2BD135C200B49C46 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +95,6 @@
 		49D8B8BB2BCFD97C00B49C46 /* Hit Score */ = {
 			isa = PBXGroup;
 			children = (
-				49D8B8FE2BD135C200B49C46 /* KeyboardLayoutConstraint.swift */,
 				49D8B8F42BD009A900B49C46 /* Services */,
 				49D8B8E92BD0090100B49C46 /* Utility */,
 				49D8B8E42BD007D100B49C46 /* Data */,
@@ -272,7 +269,6 @@
 				49D8B8FD2BD03C4200B49C46 /* CustomLabel.swift in Sources */,
 				49D8B8EB2BD0091200B49C46 /* CustomEnum.swift in Sources */,
 				49D8B8E32BD007B200B49C46 /* League.swift in Sources */,
-				49D8B8FF2BD135C200B49C46 /* KeyboardLayoutConstraint.swift in Sources */,
 				49D8B8E12BD0075900B49C46 /* Team.swift in Sources */,
 				49D8B8DE2BCFEEF700B49C46 /* CustomTextField.swift in Sources */,
 				49D8B8F62BD009B700B49C46 /* LeagueService.swift in Sources */,

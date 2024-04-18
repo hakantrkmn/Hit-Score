@@ -12,10 +12,11 @@ import LinkPresentation
 
 class HomeVC: UIViewController {
     
+    let containerView = UIView()
     let shareButton : UIButton = {
         var btn = UIButton()
         btn.setTitle("Share", for: .normal)
-        btn.setTitleColor(.orange, for: .normal)
+        //btn.setTitleColor(.orange, for: .normal)
         btn.titleLabel?.font = .systemFont(ofSize: 20,weight: .bold)
         return btn
     }()
@@ -34,6 +35,8 @@ class HomeVC: UIViewController {
     
     var HomeLeagueTextField = CustomTextField(fontSize: 20,haveUnderline: false)
     var AwayLeagueTextField = CustomTextField(fontSize: 20,haveUnderline: false)
+    
+    var firstYPos = CGFloat()
     
    
 
@@ -65,19 +68,17 @@ class HomeVC: UIViewController {
         shareButton.addTarget(self, action: #selector(shareTap), for: .touchUpInside)
         
         view.bringSubviewToFront(shareButton)
-        self.view.endEditing(true)
-        
+
 
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        // Dismiss the picker view when the user taps outside of it
         self.view.endEditing(true)
         
     }
     
     @objc func shareTap() {
-        self.screenShot = view.screenshot()
+        self.screenShot = containerView.screenshot()
         
 
         let share = UIActivityViewController(activityItems: [self.screenShot, self], applicationActivities: nil)
@@ -88,12 +89,38 @@ class HomeVC: UIViewController {
         }
         
     }
+    
+    func keyboardWillShow()
+    {
+        firstYPos = self.HomeLeagueTextField.frame.origin.y
+        UIView.animate(withDuration: 0.5) {
+            self.HomeLeagueTextField.frame.origin.y = (UIScreen.main.bounds.height - self.picker.frame.height) - self.HomeLeagueTextField.bounds.height
+            self.AwayLeagueTextField.frame.origin.y = (UIScreen.main.bounds.height - self.picker.frame.height) - self.AwayLeagueTextField.bounds.height
+        }
+    }
+    
+    func keyboardWillHide()
+    {
+        UIView.animate(withDuration: 0.5) {
+            self.HomeLeagueTextField.frame.origin.y = self.firstYPos
+            self.AwayLeagueTextField.frame.origin.y = self.firstYPos
+        }
+    }
   
     
     func setUI()
     {
-        view.addSubViews(appName,scoreBoard,AwayLeagueTextField,HomeLeagueTextField,shareButton)
+        view.addSubViews(containerView,shareButton)
+        containerView.addSubViews(appName,scoreBoard,AwayLeagueTextField,HomeLeagueTextField)
+
         
+        containerView.snp.makeConstraints { make in
+            make.width.equalToSuperview()
+            make.top.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.height.equalTo(view).multipliedBy(0.8)
+            
+        }
         appName.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
             make.top.equalTo(view.safeAreaLayoutGuide)
@@ -103,34 +130,42 @@ class HomeVC: UIViewController {
         scoreBoard.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
             make.top.equalTo(appName.snp.bottom).offset(20)
-            make.height.equalTo(500)
+            make.bottom.equalTo(containerView.snp.bottom)
         }
         
+        shareButton.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.centerX.equalTo(view)
+            make.height.equalTo(75)
+        }
 
         
         HomeLeagueTextField.snp.makeConstraints { make in
-            make.top.equalTo(scoreBoard.snp.bottom)
+            make.bottom.equalTo(containerView.snp.bottom)
             make.leading.equalTo(scoreBoard).inset(10)
             make.height.equalTo(50)
             make.width.equalTo(scoreBoard.snp.width).dividedBy(2.5)
         }
         AwayLeagueTextField.snp.makeConstraints { make in
-            make.top.equalTo(scoreBoard.snp.bottom)
+            make.bottom.equalTo(containerView.snp.bottom)
             make.trailing.equalTo(scoreBoard).inset(10)
             make.height.equalTo(50)
             make.width.equalTo(scoreBoard.snp.width).dividedBy(2.5)
         }
-        
-        shareButton.snp.makeConstraints { make in
-            make.bottom.equalTo(view)
-            make.width.height.equalTo(100)
-            make.centerX.equalTo(view)
-        }
+      
     }
     
     func configureUI()
     {
         appName.textColor = .red
+        HomeLeagueTextField.layer.borderWidth = 1
+        HomeLeagueTextField.layer.borderColor = UIColor.label.cgColor
+
+        AwayLeagueTextField.layer.borderWidth = 1
+        AwayLeagueTextField.layer.borderColor = UIColor.label.cgColor
+
+        shareButton.backgroundColor = .systemGreen
     }
     
 }
@@ -162,10 +197,13 @@ extension HomeVC : UITextFieldDelegate
 {
     // MARK: TextField protocols
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
+        keyboardWillShow()
+        textField.layer.cornerRadius = 15
+        print("313?")
+
         UIView.animate(withDuration: 0.5, delay: 0, options: [.repeat, .autoreverse], animations: {
 
-            textField.layer.borderColor = UIColor.red.cgColor
+            textField.layer.borderColor = UIColor.systemGreen.cgColor
 
         }, completion: nil)
         
@@ -173,6 +211,8 @@ extension HomeVC : UITextFieldDelegate
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        keyboardWillHide()
+        print("alaka?")
         UIView.animate(withDuration: 1) {
             textField.layer.borderColor = UIColor.black.cgColor
         }
