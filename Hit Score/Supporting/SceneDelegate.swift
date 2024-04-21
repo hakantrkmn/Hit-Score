@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import AppTrackingTransparency
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -28,6 +28,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
+        if #available(iOS 14, *) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1 ){
+                ATTrackingManager.requestTrackingAuthorization { (status) in
+                  //print("IDFA STATUS: \(status.rawValue)")
+                }
+            }
+          
+        }
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
     }

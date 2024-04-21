@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 import LinkPresentation
-
+import AppTrackingTransparency
 
 class HomeVC: UIViewController {
     
@@ -45,6 +45,12 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 14, *) {
+          ATTrackingManager.requestTrackingAuthorization { (status) in
+            
+            //print("IDFA STATUS: \(status.rawValue)")
+          }
+        }
         view.backgroundColor = .systemBackground
         setUI()
         configureUI()
@@ -69,7 +75,6 @@ class HomeVC: UIViewController {
         
         view.bringSubviewToFront(shareButton)
 
-
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
@@ -83,6 +88,9 @@ class HomeVC: UIViewController {
 
         let share = UIActivityViewController(activityItems: [self.screenShot, self], applicationActivities: nil)
         share.excludedActivityTypes = [.saveToCameraRoll]
+        share.popoverPresentationController?.sourceView = self.view
+        share.modalPresentationStyle = .formSheet
+        share.popoverPresentationController?.sourceRect = CGRectMake(0, view.frame.height, view.frame.width, 100) // change the rect to the frame you want the view to appear
         Task{
             present(share, animated: true, completion: nil)
             
@@ -93,9 +101,11 @@ class HomeVC: UIViewController {
     func keyboardWillShow()
     {
         firstYPos = self.HomeLeagueTextField.frame.origin.y
+        
+        
         UIView.animate(withDuration: 0.5) {
-            self.HomeLeagueTextField.frame.origin.y = (UIScreen.main.bounds.height - self.picker.frame.height) - self.HomeLeagueTextField.bounds.height
-            self.AwayLeagueTextField.frame.origin.y = (UIScreen.main.bounds.height - self.picker.frame.height) - self.AwayLeagueTextField.bounds.height
+            self.HomeLeagueTextField.frame.origin.y = (UIScreen.main.bounds.size.height - self.picker.frame.height) - self.HomeLeagueTextField.bounds.height
+            self.AwayLeagueTextField.frame.origin.y = (UIScreen.main.bounds.size.height - self.picker.frame.height) - self.AwayLeagueTextField.bounds.height
         }
     }
     

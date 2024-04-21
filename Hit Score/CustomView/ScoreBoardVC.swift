@@ -205,6 +205,7 @@ extension ScoreBoardVC : UITextFieldDelegate
 {
     // MARK: Text Field Protocols
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        teamPicker.selectRow(0, inComponent: 0, animated: true)
         currentTextField = textField
         let tf = self.currentTextField as! CustomTextField
         UIView.animate(withDuration: 0.5, delay: 0, options: [.repeat, .autoreverse], animations: {
